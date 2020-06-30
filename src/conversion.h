@@ -50,7 +50,7 @@ typedef long long longlong;
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molfile_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molfile_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molfile_to_molecule_init().
@@ -77,7 +77,7 @@ char *molfile_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsign
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_molfile_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_molfile_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_molfile_init().
@@ -104,7 +104,7 @@ char *molecule_to_molfile(UDF_INIT *initid, UDF_ARGS *args, char *result, unsign
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool V3000_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int V3000_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by V3000_to_molecule_init().
@@ -131,7 +131,7 @@ char *V3000_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_V3000_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_V3000_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_V3000_init().
@@ -158,7 +158,7 @@ char *molecule_to_V3000(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool smiles_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int smiles_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by smiles_to_molecule_init().
@@ -185,7 +185,7 @@ char *smiles_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigne
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_smiles_init().
@@ -212,7 +212,7 @@ char *molecule_to_smiles(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigne
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_query_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_query_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_query_init().
@@ -239,7 +239,7 @@ char *molecule_to_query(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_molecule_init().
@@ -266,7 +266,7 @@ char *molecule_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsig
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool cml_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int cml_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by cml_to_molecule_init().
@@ -293,7 +293,7 @@ char *cml_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_cml_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_cml_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_cml_init().
@@ -320,7 +320,7 @@ char *molecule_to_cml(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool fingerprint_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int fingerprint_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by fingerprint_init().
@@ -347,7 +347,7 @@ char *fingerprint(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long 
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool fingerprint2_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int fingerprint2_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by fingerprint2_init().
@@ -374,7 +374,7 @@ char *fingerprint2(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool fingerprint3_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int fingerprint3_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by fingerprint3_init().
@@ -401,7 +401,7 @@ char *fingerprint3(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool fingerprint4_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int fingerprint4_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by fingerprint4_init().
@@ -428,7 +428,7 @@ char *fingerprint4(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_canonical_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_canonical_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_canonical_smiles_init().
@@ -455,7 +455,7 @@ char *molecule_to_canonical_smiles(UDF_INIT *initid, UDF_ARGS *args, char *resul
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool inchi_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int inchi_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by inchi_to_molecule_init().
@@ -482,7 +482,7 @@ char *inchi_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_inchi_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_inchi_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_inchi_init().
@@ -509,7 +509,7 @@ char *molecule_to_inchi(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_serializedOBMol_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_serializedOBMol_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_serializedOBMol_init().
@@ -536,7 +536,7 @@ char *molecule_to_serializedOBMol(UDF_INIT *initid, UDF_ARGS *args, char *result
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool pdb_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int pdb_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by pdb_to_molecule_init().
@@ -563,7 +563,7 @@ char *pdb_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool mol2_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int mol2_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by mol2_to_molecule_init().
@@ -589,7 +589,7 @@ char *mol2_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned 
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool molecule_to_mol2_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int molecule_to_mol2_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by molecule_to_mol2_init().

@@ -49,7 +49,7 @@ typedef long long longlong;
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool mychem_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int mychem_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by mychem_version_init().
@@ -76,7 +76,7 @@ char *mychem_version(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned lo
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool openbabel_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int openbabel_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by openbabel_version_init().
@@ -103,7 +103,7 @@ char *openbabel_version(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool inchi_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int inchi_version_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by inchi_version_init().

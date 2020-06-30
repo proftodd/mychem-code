@@ -49,7 +49,7 @@ typedef long long longlong;
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool match_substruct_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int match_substruct_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by match_substruct_init().
@@ -76,7 +76,7 @@ longlong match_substruct(UDF_INIT *initid, UDF_ARGS *args, char *is_null, char *
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool substruct_atom_ids_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int substruct_atom_ids_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by substruct_atom_ids_init().
@@ -104,7 +104,7 @@ char *substruct_atom_ids(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigne
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool tanimoto_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int tanimoto_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by tanimoto_init().
@@ -131,7 +131,7 @@ double tanimoto(UDF_INIT *initid, UDF_ARGS *args, char *is_null, char *error);
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool substruct_count_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int substruct_count_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by substruct_count_init().
@@ -158,7 +158,7 @@ longlong substruct_count(UDF_INIT *initid, UDF_ARGS *args, char *is_null, char *
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool bit_fp_and_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int bit_fp_and_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by bit_fp_and_init().
@@ -185,7 +185,7 @@ char *bit_fp_and(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long *
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool bit_fp_or_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int bit_fp_or_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by bit_fp_or_init().
@@ -212,7 +212,7 @@ char *bit_fp_or(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long *l
  * @param message The error message that should be passed to the user on fail
  * @return True if an error is raised during the initialization
  */
-my_bool bit_fp_count_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
+int bit_fp_count_init(UDF_INIT *initid, UDF_ARGS *args, char *message);
 
 /**
  * @short Should free all resources allocated by bit_fp_count_init().

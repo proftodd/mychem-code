@@ -33,7 +33,7 @@
 
 #ifdef HAVE_DLOPEN
 
-my_bool molweight_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molweight_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLWEIGHT() requires one argument");
@@ -84,7 +84,7 @@ double molweight(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char 
   return weight;
 }
 
-my_bool exactmass_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int exactmass_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: EXACTMASS() requires one argument");
@@ -134,7 +134,7 @@ double exactmass(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char 
   return weight;
 }
 
-my_bool number_of_atoms_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_atoms_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_ATOMS() requires one argument");
@@ -187,7 +187,7 @@ longlong number_of_atoms(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *arg
   return count;
 }
 
-my_bool number_of_heavy_atoms_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_heavy_atoms_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_HEAVY_ATOMS() requires one argument");
@@ -235,7 +235,7 @@ longlong number_of_heavy_atoms(UDF_INIT *initid __attribute__((unused)), UDF_ARG
   return count;
 }
 
-my_bool number_of_bonds_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_bonds_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_BONDS() requires one argument");
@@ -274,7 +274,7 @@ longlong number_of_bonds(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *arg
   return count;
 }
 
-my_bool number_of_rotable_bonds_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_rotable_bonds_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_ROTABLE_BONDS() requires one argument");
@@ -322,7 +322,7 @@ longlong number_of_rotable_bonds(UDF_INIT *initid __attribute__((unused)), UDF_A
   return count;
 }
 
-my_bool total_charge_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int total_charge_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: TOTAL_CHARGE() requires one argument");
@@ -370,7 +370,7 @@ longlong total_charge(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, 
   return count;
 }
 
-my_bool molformula_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molformula_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLFORMULA() requires one argument");
@@ -442,7 +442,7 @@ char *molformula(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long *
   return initid->ptr;
 }
 
-my_bool number_of_acceptors_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_acceptors_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_ACCEPTORS() requires one argument");
@@ -490,7 +490,7 @@ longlong number_of_acceptors(UDF_INIT *initid __attribute__((unused)), UDF_ARGS 
   return acceptors;
 }
 
-my_bool number_of_donors_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_donors_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_DONORS() requires one argument");
@@ -538,7 +538,7 @@ longlong number_of_donors(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *ar
   return donors;
 }
 
-my_bool molpsa_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molpsa_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLPSA() requires one argument");
@@ -586,7 +586,7 @@ double molpsa(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char *is
   return PSA;
 }
 
-my_bool molmr_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molmr_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLMR() requires one argument");
@@ -634,7 +634,7 @@ double molmr(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char *is_
   return MR;
 }
 
-my_bool mollogp_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int mollogp_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLLOGP() requires one argument");
@@ -682,7 +682,7 @@ double mollogp(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char *i
   return LogP;
 }
 
-my_bool is_2D_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int is_2D_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: IS_2D() requires one argument");
@@ -730,7 +730,7 @@ longlong is_2D(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char *i
   return is2DBool;
 }
 
-my_bool is_3D_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int is_3D_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: IS_3D() requires one argument");
@@ -778,7 +778,7 @@ longlong is_3D(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, char *i
   return is3DBool;
 }
 
-my_bool is_chiral_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int is_chiral_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: IS_CHIRAL() requires one argument");
@@ -826,7 +826,7 @@ longlong is_chiral(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args, cha
   return isChiralBool;
 }
 
-my_bool number_of_rings_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int number_of_rings_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: NUMBER_OF_RINGS() requires one argument");

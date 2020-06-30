@@ -33,7 +33,7 @@
 
 #ifdef HAVE_DLOPEN
 
-my_bool molfile_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molfile_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLFILE_TO_MOLECULE() requires one argument");
@@ -107,7 +107,7 @@ char *molfile_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsign
   return initid->ptr;
 }
 
-my_bool molecule_to_molfile_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_molfile_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_MOLFILE() requires one argument");
@@ -182,7 +182,7 @@ char *molecule_to_molfile(UDF_INIT *initid, UDF_ARGS *args, char *result, unsign
   return initid->ptr;
 }
 
-my_bool V3000_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int V3000_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: V3000_TO_MOLECULE() requires one argument");
@@ -254,7 +254,7 @@ char *V3000_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
   return initid->ptr;
 }
 
-my_bool molecule_to_V3000_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_V3000_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_V3000() requires one argument");
@@ -326,7 +326,7 @@ char *molecule_to_V3000(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
   return initid->ptr;
 }
 
-my_bool smiles_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int smiles_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: SMILES_TO_MOLECULE() requires one argument");
@@ -401,7 +401,7 @@ char *smiles_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigne
   return initid->ptr;
 }
 
-my_bool molecule_to_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_SMILES() requires one argument");
@@ -476,7 +476,7 @@ char *molecule_to_smiles(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigne
   return initid->ptr;
 }
 
-my_bool molecule_to_query_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_query_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_QUERY() requires one argument");
@@ -550,7 +550,7 @@ char *molecule_to_query(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
   return initid->ptr;
 }
 
-my_bool molecule_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_MOLECULE() requires one argument");
@@ -625,7 +625,7 @@ char *molecule_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsig
   return initid->ptr;
 }
 
-my_bool cml_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int cml_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: CML_TO_MOLECULE() requires one argument");
@@ -697,7 +697,7 @@ char *cml_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
   return initid->ptr;
 }
 
-my_bool molecule_to_cml_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_cml_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_CML() requires one argument");
@@ -768,7 +768,7 @@ char *molecule_to_cml(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
   return initid->ptr;
 }
 
-my_bool fingerprint_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int fingerprint_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 2) {
     strcpy(message, "Wrong number of arguments: FINGERPRINT() requires two arguments");
@@ -853,7 +853,7 @@ char *fingerprint(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long 
   return initid->ptr;
 }
 
-my_bool fingerprint2_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int fingerprint2_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: FINGERPRINT2() requires one argument");
@@ -927,7 +927,7 @@ char *fingerprint2(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
   return initid->ptr;
 }
 
-my_bool fingerprint3_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int fingerprint3_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: FINGERPRINT3() requires one argument");
@@ -1001,7 +1001,7 @@ char *fingerprint3(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
   return initid->ptr;
 }
 
-my_bool fingerprint4_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int fingerprint4_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: FINGERPRINT2() requires one argument");
@@ -1075,7 +1075,7 @@ char *fingerprint4(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned long
   return initid->ptr;
 }
 
-my_bool molecule_to_canonical_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_canonical_smiles_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_CANONICAL_SMILES() requires one argument");
@@ -1147,7 +1147,7 @@ char *molecule_to_canonical_smiles(UDF_INIT *initid, UDF_ARGS *args, char *resul
   return initid->ptr;
 }
 
-my_bool inchi_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int inchi_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: INCHI_TO_MOLECULE() requires one argument");
@@ -1221,7 +1221,7 @@ char *inchi_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
   return initid->ptr;
 }
 
-my_bool molecule_to_inchi_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_inchi_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_INCHI() requires one argument");
@@ -1296,7 +1296,7 @@ char *molecule_to_inchi(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned
   return initid->ptr;
 }
 
-my_bool molecule_to_serializedOBMol_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_serializedOBMol_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_BINARY() requires one argument");
@@ -1368,7 +1368,7 @@ char *molecule_to_serializedOBMol(UDF_INIT *initid, UDF_ARGS *args, char *result
   return initid->ptr;
 }
 
-my_bool pdb_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int pdb_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: PDB_TO_MOLECULE() requires one argument");
@@ -1444,7 +1444,7 @@ char *pdb_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned l
   return initid->ptr;
 }
 
-my_bool mol2_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int mol2_to_molecule_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOL2_TO_MOLECULE() requires one argument");
@@ -1519,7 +1519,7 @@ char *mol2_to_molecule(UDF_INIT *initid, UDF_ARGS *args, char *result, unsigned 
   return initid->ptr;
 }
 
-my_bool molecule_to_mol2_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
+int molecule_to_mol2_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
   if (args->arg_count != 1) {
     strcpy(message, "Wrong number of arguments: MOLECULE_TO_MOL2() requires one argument");
