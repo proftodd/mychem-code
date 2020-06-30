@@ -29,8 +29,6 @@
 #ifndef __PROPERTY_H
 #define __PROPERTY_H
 
-#ifdef STANDARD
-/* STANDARD is defined, don't use any mysql functions */
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -41,13 +39,7 @@ typedef __int64 longlong;
 typedef unsigned long long ulonglong;
 typedef long long longlong;
 #endif /*__WIN__*/
-#else
-#include <my_global.h>
-#include <my_sys.h>
-#endif /* STANDARD */
 #include <mysql.h>
-#include <m_ctype.h>
-#include <m_string.h>		/* To get strmov() */
 
 #ifdef HAVE_DLOPEN
 
